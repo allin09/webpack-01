@@ -1,0 +1,18 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "./public/favicon.ico",
+      "sizes": [64, 32, 24, 16],
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "crossorigin": null,
+  "inject": true,
+  "filename": "manifest.json"
+}
