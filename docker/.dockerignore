@@ -1,0 +1,9 @@
+.vscode
+.DS_Store
+.git
+.gitignore
+npm-debug.log
+dist
+node_modules
+package-lock.json
+README.md

@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  web:
+    build: .
+    image: web
+    container_name: web
+    volumes:
+      - .:/home/www/webpack-01
+    ports:
+      - 8080:9999
+    environment:
+      - DOCKER=1
+    restart: unless-stopped
+    tty: true
+    privileged: true
+    # command
