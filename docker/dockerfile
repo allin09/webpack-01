@@ -16,8 +16,10 @@ RUN apt-get update\
     && apt-get clean \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# RUN echo $PWD,$whl,$pwd
 
 WORKDIR ${work_dir}
+# RUN echo $PWD,$whl,$pwd
 
 COPY . ${work_dir}
 

@@ -4,12 +4,12 @@
   "description": "",
   "main": "webpack.config.babel.js",
   "scripts": {
-    "start": "webpack-dev-server --config config/webpack.config.babel.js --open --watch --progress",
+    "start": "webpack-dev-server --config config/webpack.config.babel.js --disableHostCheck --open --watch --progress",
     "build": "rimraf dist && webpack --config config/webpack.config.babel.js  --config-register @babel/register --progress --profile --colors --display-error-details --display-reasons",
     "lint": "tslint --project tsconfig.json src/**/*.ts src/**/*.tsx",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docker:start": "docker-compose down&&docker-compose -f docker/docker-compose.yml up --build -d",
-    "log": "docker-compose logs -f",
+    "docker:start": "docker-compose -f docker/docker-compose.yml down&&docker-compose -f docker/docker-compose.yml up --build -d",
+    "log": "docker-compose -f docker/docker-compose.yml logs -f",
     "nginx": "npm run build && docker-compose -f docker/nginx/docker-compose.yml up --build -d"
   },
   "author": "",
