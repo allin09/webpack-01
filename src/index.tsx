@@ -2,6 +2,7 @@
 // const balls = require('img/balls.png')
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import './ts-01'
 function Dec_1(t: any) {
   console.log('Dec_1: ', t)
   Object.defineProperties(t.prototype, {
@@ -23,6 +24,7 @@ function Dec_1(t: any) {
 function Dec_2<T extends new (...args: any[]) => {}>(t: T) {
   console.log('Dec_2: ', t)
   return class extends t {
+    displayName = 'aa'
     newProperty = 'new property'
     hello3 = 'override'
   }
@@ -49,4 +51,3 @@ console.log(A)
 // console.log(balls)
 const Dom = document.querySelector('#root')
 ReactDOM.render(<A />, Dom)
-console.log(3232)
