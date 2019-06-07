@@ -7,7 +7,7 @@
     "jsx": "react",
     "allowJs": true,
     "sourceMap": true,
-    "noImplicitAny": true, // 是否隐式使用any
+    "noImplicitAny": false, // 是否隐式使用any,为 true 时，进行强类型检查,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "lib": ["dom", "dom.iterable", "esnext"],

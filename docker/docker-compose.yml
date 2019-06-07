@@ -8,7 +8,7 @@ services:
     image: webpack_web
     container_name: webpack_web
     volumes:
-      - $PWD:/home/www/webpack-01
+      - ../:/home/www/webpack-01
     ports:
       - 8080:80
     environment:
@@ -29,4 +29,5 @@ services:
       # - ../../dist/:/usr/share/nginx/html/
       - ./nginx/log:/var/log/nginx:rw
     ports:
-      - '0.0.0.0:80:80'
+      - '8081:80'
+    restart: unless-stopped

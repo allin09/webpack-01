@@ -22,10 +22,10 @@ function getArg(arg) {
   return arg
 }
 module.exports = () => {
-  console.error(Object.values(arguments).length)
-  Object.values(arguments).map((arg, k) => {
-    console.log('webpack config:', k, getArg(arg))
-  })
+  // console.error(Object.values(arguments).length)
+  // Object.values(arguments).map((arg, k) => {
+  //   console.log('webpack config:', k, getArg(arg))
+  // })
 
   return {
     mode: 'development',
@@ -117,6 +117,7 @@ module.exports = () => {
     devServer: {
       host: '0.0.0.0',
       port: process.env.docker_port || '9999',
+      open: !process.env.docker_port,
       contentBase: getPath('./dist'),
       historyApiFallback: true, //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
       hot: true
